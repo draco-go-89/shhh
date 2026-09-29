@@ -5,7 +5,7 @@ body{
     background-repeat: no-repeat;
     background-position: center center;
     width: 100%;
-    background-attachment: scroll;
+    /* background-attachment: scroll; */
     min-height: 100vh; 
     background-size: cover; /*cover (replace) */
     background-position: center;
