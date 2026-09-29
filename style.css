@@ -2,6 +2,11 @@ body{
     background-color: rgba(245, 245, 245, 0.371);
     text-transform: lowercase;
     background-image: url(image/image3.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+    background-attachment: scroll;
+    min-height: 100vh; 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
