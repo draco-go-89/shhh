@@ -53,6 +53,8 @@ body{
 
 .btn {
     cursor: pointer;
+    display: inline-block;
+    
 }
 
 /* .btn:hover {   
