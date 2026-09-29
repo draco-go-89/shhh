@@ -1,0 +1,57 @@
+body{
+    background-color: rgba(245, 245, 245, 0.371);
+    text-transform: lowercase;
+    background-image: url(image/image3.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    margin: 10px auto;
+    font-family: 'Segoe UI', sans-serif;
+    /* border: 3px solid black; */
+    box-sizing: border-box;
+    position: relative;
+    justify-content: center;
+}
+.outline {
+    border: 1px solid;
+    background-color: rgb(245, 245, 245);
+    /* border-radius: 1px; */
+    height: 90dvh;
+    box-sizing: border-box;
+}
+
+.outline marquee {
+    color: black;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+    position: relative;
+
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    padding: 1px;
+    backdrop-filter: blur(10px);
+    background: rgba(245, 245, 245, 0.371);
+    border: 1px solid rgba(245, 245, 245, 0.371);
+    
+}
+
+.nav-link {
+    color: black;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+/* .btn:hover {   
+    transform: translateY(20px);
+    opacity: 0.9;
+}  */
+/* (bt.:hover transforn) that one is when user trying to press button moves away */

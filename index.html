@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <button>
+            <nav class="menu">
+                <a href="https://draco-go-89.github.io/music-player/" class="nav-link">music play</a>
+            </nav>
+        </button>
+        <div class="music">
+            <audio id="bg-music" src="song/pillow.mp3"></audio>
+            <div class="music-controls">
+                <button onclick="document.getElementById('bg-music').play()" class="btn play-btn">play</button>
+                <button onclick="document.getElementById('bg-music').pause()" class="btn pause-btn">stop</button>
+                <button>pillowtalk by zayn</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <p>    <!-- <p>tap anh stop the moving</p> -->
+        <marquee
+            class="outline"
+            direction="down"
+            width= 50%
+            height=70%
+            behavior="alternate"
+            scrollamount="11"
+            onmouseover="this.stop()" 
+            onmouseout="this.start()"
+            >
+
+            <marquee
+                behavior="alternate"
+                scrollamount="13"
+                onmouseover="this.stop()" 
+                onmouseout="this.start()"
+                >
+                its a paradise
+                <p></p>
+            </marquee>
+        </marquee>
+    </p>
+</body>
+</html>
