@@ -7,7 +7,7 @@ body{
     width: 100%;
     background-attachment: scroll;
     min-height: 100vh; 
-    background-size: contain; /* cover (replace) */
+    background-size: contain; /*cover (replace) */
     background-position: center;
     background-repeat: no-repeat;
     height: 100%;
@@ -21,8 +21,8 @@ body{
 }
 .outline {
     border: 1px solid;
-    background-color: rgb(245, 245, 245);
-    /* border-radius: 1px; */
+    background-color: rgba(245, 245, 245, 0); /*here change transparent if its a paradise*/
+    border-radius: 1px;
     height: 90dvh;
     box-sizing: border-box;
 }
