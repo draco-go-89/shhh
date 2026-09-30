@@ -3,12 +3,8 @@
     {
       "name": "Default",
       "files": [
-        ".vscode/changelists.json",
         "video/index.html",
-        "video/bird.svg",
-        "video/hang.svg",
-        "index.html",
-        "style.css"
+        ".vscode/changelists.json"
       ]
     }
   ],
