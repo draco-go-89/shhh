@@ -3,7 +3,8 @@
     {
       "name": "Default",
       "files": [
-        "song/ZAYN_-_PILLOWTALK__Official_Video_(256k).mp3"
+        ".vscode/changelists.json",
+        "index.html"
       ]
     }
   ],
