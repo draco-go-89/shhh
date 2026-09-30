@@ -4,8 +4,8 @@
       "name": "Default",
       "files": [
         ".vscode/changelists.json",
-        "video/index.html",
-        "index.html"
+        "3rd/index.html",
+        "3rd/kina.jpg"
       ]
     }
   ],
