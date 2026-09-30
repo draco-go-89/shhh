@@ -22,19 +22,40 @@
             object-fit: cover;    /* Prevents distortion */
             border-radius: 8px;
         }
+
+        .svg {
+            position: sticky;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        #showBtn {
+            position: absolute;
+            color: black
+        }
     </style>
 </head>
 <body>
 
     <div>
-        <button id="showBtn" onclick="showContent()">show something</button>
+        <section class="svg">
+            <img src="hang.svg" alt="bird" width="50%" height="auto">
+        </section>
 
+        <button id="showBtn" onclick="showContent()">show something</button>
         <template id="video-template">
             <div class="video-container">
                 <video class="video-player" controls playsinline poster="image2.jpg">
                     <source src="uzi.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
+                <img src=" " width="100%">
+                <img src=" " width="100%">
             </div>
         </template>
     </div>

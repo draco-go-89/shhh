@@ -66,16 +66,16 @@ body{
 
 /* Define the blinking animation */
 @keyframes blinker {
-    40% {
+    50% {
         opacity: 0;
     }
 }
 
 /* Apply the animation to a class */
 .blink-text {
-    animation: blinker 1s linear infinite;
-    color: #0033ff4f;
-    font-weight: 100%;
+    animation: blinker 1ms linear infinite;
+    color: #020823db;
+    font-weight: 500;
 }
 
 .video-player {

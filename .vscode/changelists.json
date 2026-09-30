@@ -3,7 +3,12 @@
     {
       "name": "Default",
       "files": [
-        "\"video/Lil Uzi Vert - Positions (Revive Her) - Pakaian Wanita Terbesar (1080p, rutube).mp4\""
+        ".vscode/changelists.json",
+        "video/index.html",
+        "video/bird.svg",
+        "video/hang.svg",
+        "index.html",
+        "style.css"
       ]
     }
   ],
