@@ -29,6 +29,7 @@
                     <button onclick="document.getElementById('bg-music').play()" class="btn play-btn">play</button>
                     <button onclick="document.getElementById('bg-music').pause()" class="btn pause-btn">stop</button>
                     <button>pillowtalk by zayn</button>
+                    <button><a href="video/index.html" class="nav-link">see something</a></button>
                 </div>
         </div>
 
@@ -61,25 +62,7 @@
         <img src="image/image3.jpg" width="50%">
         <span class="blink-text">  //</span>
         <!-- here show something till script close -->
-        <div>
-            <button onclick="showContent()">show something</button>
-            <template>
-                <!-- <img src="image/image1.jpg" width="50%" height="60%"> -->
-                <div>
-                    <video class="video-player" controls poster="image/image2.jpg">
-                        <source src="image/uzi.mp4" type="video/mp4" />
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-            </template>
-            <script>
-                function showContent() {
-                    let temp = document.getElementsByTagName("template")[0];
-                    let clon = temp.content.cloneNode(true);
-                    document.body.appendChild(clon);
-                }
-            </script>
-        </div>
+         
     </section>
 </body>
 </html>

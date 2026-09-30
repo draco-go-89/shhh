@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2nd page</title>
+    <style>
+        /* Mobile-first sizing container */
+        .video-container {
+            display: center;
+            width: 100%;
+            max-width: 100%; /* Constrains size on larger screens */
+            margin: 1rem auto;
+        }
+
+        /* Enforce block display and exact dimensions */
+        .video-player {
+            display: center;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 9; /* Maintains standard widescreen proportions */
+            object-fit: cover;    /* Prevents distortion */
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <button id="showBtn" onclick="showContent()">show something</button>
+
+        <template id="video-template">
+            <div class="video-container">
+                <video class="video-player" controls playsinline poster="image2.jpg">
+                    <source src="justin.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+                <video class="video-player" controls playsinline poster="image2.jpg">
+                    <source src="uzi.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </template>
+    </div>
+
+    <script>
+        function showContent() {
+            const temp = document.getElementById("video-template");
+            const clon = temp.content.cloneNode(true);
+            
+            // Append the cloned node
+            document.body.appendChild(clon);
+
+            // Optional: disable button to prevent multiple duplicate videos
+            document.getElementById("showBtn").disabled = true;
+        }
+    </script>
+
+</body>
+</html>
