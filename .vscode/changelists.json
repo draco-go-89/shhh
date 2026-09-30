@@ -4,7 +4,10 @@
       "name": "Default",
       "files": [
         "index.html",
-        ".vscode/changelists.json"
+        "style.css",
+        ".vscode/changelists.json",
+        "image/image1.jpg",
+        "image/image2.jpg"
       ]
     }
   ],

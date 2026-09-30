@@ -62,3 +62,19 @@ body{
     opacity: 0.9;
 }  */
 /* (bt.:hover transforn) that one is when user trying to press button moves away */
+
+
+/* Define the blinking animation */
+@keyframes blinker {
+    40% {
+        opacity: 0;
+    }
+}
+
+/* Apply the animation to a class */
+.blink-text {
+    animation: blinker 1s linear infinite;
+    color: #0033ff4f;
+    font-weight: 100%;
+}
+
