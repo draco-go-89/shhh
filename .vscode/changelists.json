@@ -3,16 +3,8 @@
     {
       "name": "Default",
       "files": [
-        "style.css",
-        ".vscode/changelists.json",
         "video/index.html",
-        "index.html",
-        "image/uzi.mp4",
-        "video/uzi.mp4",
-        "image/image2.jpg",
-        "video/image2.jpg",
-        "video/justin.mp4",
-        "video/image3.jpg"
+        ".vscode/changelists.json"
       ]
     }
   ],
