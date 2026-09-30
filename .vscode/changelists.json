@@ -3,9 +3,8 @@
     {
       "name": "Default",
       "files": [
-        ".vscode/changelists.json",
         "3rd/index.html",
-        "3rd/kina.jpg"
+        ".vscode/changelists.json"
       ]
     }
   ],
