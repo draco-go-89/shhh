@@ -78,3 +78,11 @@ body{
     font-weight: 100%;
 }
 
+.video-player {
+  width: 50%;
+  height: 60%;
+  object-fit: contain;
+  display: block;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  touch-action: manipulation;
+}

@@ -3,8 +3,10 @@
     {
       "name": "Default",
       "files": [
+        "index.html",
         ".vscode/changelists.json",
-        "image/uzi.mp4"
+        "style.css",
+        "image/image2.jpg"
       ]
     }
   ],
