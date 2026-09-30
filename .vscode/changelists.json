@@ -3,9 +3,8 @@
     {
       "name": "Default",
       "files": [
-        "style.css",
-        ".vscode/changelists.json",
-        ".gitignore"
+        "index.html",
+        ".vscode/changelists.json"
       ]
     }
   ],
