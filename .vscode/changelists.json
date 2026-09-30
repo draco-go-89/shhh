@@ -4,10 +4,8 @@
       "name": "Default",
       "files": [
         ".vscode/changelists.json",
-        "3rd/index.html",
-        "3rd/mine.mp3",
-        "index.html",
-        "3rd/forest.jpg"
+        "video/index.html",
+        "index.html"
       ]
     }
   ],

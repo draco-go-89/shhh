@@ -43,6 +43,16 @@
             text-decoration: none;
             transition: 0.2s;
         }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            padding: 1px;
+            backdrop-filter: blur(10px);
+            background: rgba(245, 245, 245, 0);
+            border: 1px solid rgba(245, 245, 245, 0);
+        
+        }
     </style>
 </head>
 <body>
@@ -64,7 +74,13 @@
             <!-- <button><a href="https://www.youtube.com/watch?v=PMk8L9FNqnY&list=PLqK6-pJRN1VbH2fpK0jAFJDAiW_WVsVgg&pp=sAgC" class="nav-link">Youthube playlist</a></button> -->
         </template>
     </div>
-
+        <p>
+            <button>
+                <nav class="menu">
+                    <a href="https://draco-go-89.github.io/music-player/" class="nav-link">playlist</a>
+                </nav>
+            </button>
+        </p>
     <script>
         function showContent() {
             const temp = document.getElementById("video-template");
