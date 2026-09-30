@@ -3,8 +3,11 @@
     {
       "name": "Default",
       "files": [
-        "video/index.html",
-        ".vscode/changelists.json"
+        ".vscode/changelists.json",
+        "3rd/index.html",
+        "3rd/mine.mp3",
+        "index.html",
+        "3rd/forest.jpg"
       ]
     }
   ],
