@@ -14,72 +14,119 @@
         .lyrics {
             font-weight: 500;
             font-family: sans-serif;
-            /* font-family: cursive; */
             font-style: italic;
             width: 76%;
             height: 110px;
             position: inherit;
-            background-image: url(kina.jpg);
+            background-image: url(forest.jpg);
+            /* 1. HIDES THE LYRICS BY DEFAULT */
+            display: none; 
         }
     </style>
 </head>
 
 <body>
-    <div class="music">
-        <audio id="bg-music" src="mine.mp3"></audio>
-        <div class="music-controls">
-            <button onclick="document.getElementById('bg-music').play()" class="btn play-btn">play</button>
-            <button onclick="document.getElementById('bg-music').pause()" class="btn pause-btn">stop</button>
-            <button>this is for my girl</button>
-        </div>
-    </div>
     <p>
-        <textarea class="lyrics">
-
+        <!-- Added an ID here so JavaScript can easily target it -->
+        <textarea id="lyricsTextarea" class="lyrics">
     My, my, my girl
     This is for my girl, my sexy babe
     In my heart, oh, oh
     My, my, my girl
     This is for my girl, my sexy babe
     In my heart, oh, oh
-    My, my, my girl
-    This is for my girl, my sexy babe
-    In my heart, oh, oh
-    My, my, my girl
-    This is for my girl, my sexy babe
-    In my heart, oh, oh
-    My, my, my girl
-    This is for my girl, my sexy babe
-    In my heart, oh, oh
-    My, my, my girl
-    This is for my girl, my sexy babe
-    In my heart, oh, oh
-    My, my, my girl
-    This is for my girl, my sexy babe
-    In my heart, oh, oh
-    My, my, my girl
-    This is for my girl, my sexy babe
-    In my heart, oh, oh
-    My, my, my girl
-    This is for my girl, my sexy babe
-    In my heart, oh, oh
-    My, my, my girl
-    This is for my girl, my sexy babe
-    In my heart, oh, oh
-    My, my, my girl
-    This is for my girl, my sexy babe
-    In my heart, oh, oh
-    My, my, my girl
-    This is for my girl, my sexy babe
-    In my heart, oh, oh
-    My, my, my girl
-    This is for my girl, my sexy babe
-    In my heart, oh, oh
-    My, my, my girl
-    This is for my girl, my sexy babe
-    In my heart, oh, oh
-    </textarea>
+        </textarea>
     </p>
-</body>
 
+    <div class="dropdown-wrapper">
+        <select id="audioDropdown">
+            <option value="" disabled selected>Select</option>
+            <option value="mine.mp3">ur mine</option>
+            <option value=".mp3"></option>
+            <option value=".mp3"></option>
+            <option value=".mp3"></option>
+            <option value=".mp3"></option>
+            <option value=".mp3"></option>
+            <option value=".mp3"></option>
+            <option value=".mp3"></option>
+            <option value=".mp3"></option>
+            <option value=".mp3"></option>
+            <option value=".mp3"></option>
+            <option value=".mp3"></option>
+            <option value=".mp3"></option>
+            <option value=".mp3"></option>
+            <option value=".mp3"></option>
+            <option value=".mp3"></option>
+            <option value=".mp3"></option>
+            <option value=".mp3"></option>
+            <option value=".mp3"></option>
+            <option value=".mp3"></option>
+            <option value=".mp3"></option>
+            <option value=".mp3"></option>
+            <option value=".mp3"></option>
+            <option value=".mp3"></option>
+            <option value=".mp3"></option>
+            <option value=".mp3"></option>
+            <option value=".mp3">ur mine</option>
+        </select>
+    </div>
+
+    <!-- Simple Play/Stop Buttons -->
+    <div class="controls" style="margin-top: 10px;">
+        <button id="playBtn">Play</button>
+        <button id="stopBtn">Stop</button>
+    </div>
+
+    <!-- Hidden HTML Audio Element -->
+    <audio id="mainAudio"></audio>
+
+    <script>
+        const dropdown = document.getElementById('audioDropdown');
+        const audioPlayer = document.getElementById('mainAudio');
+        const playBtn = document.getElementById('playBtn');
+        const stopBtn = document.getElementById('stopBtn');
+        // 2. TARGET THE TEXTAREA ELEMENT
+        const lyricsTextarea = document.getElementById('lyricsTextarea'); 
+
+        // 1. Handle song changes from the dropdown
+        dropdown.addEventListener('change', function () {
+            const selectedTrackUrl = this.value;
+
+            // 3. TOGGLE VISIBILITY BASED ON THE SELECTED TRACK
+            // Add any other triggering filenames inside the array brackets, separated by commas
+            const triggeringSongs = ["mine.mp3"]; 
+
+            if (triggeringSongs.includes(selectedTrackUrl)) {
+                lyricsTextarea.style.display = "block"; // Show lyrics
+            } else {
+                lyricsTextarea.style.display = "none";  // Hide lyrics for any other file
+            }
+
+            if (selectedTrackUrl) {
+                audioPlayer.src = selectedTrackUrl;
+                audioPlayer.load();
+                audioPlayer.play().catch(error => {
+                    console.log("Playback interaction error caught: ", error);
+                });
+            }
+        });
+
+        // 2. Play button functionality
+        playBtn.addEventListener('click', function () {
+            if (audioPlayer.src) {
+                audioPlayer.play().catch(error => {
+                    console.log("Error playing audio: ", error);
+                });
+            } else {
+                alert("Please select a song from the dropdown first!");
+            }
+        });
+
+        // 3. Stop button functionality
+        stopBtn.addEventListener('click', function () {
+            audioPlayer.pause();
+            audioPlayer.currentTime = 0;
+        });
+    </script>
+</body>
 </html>
