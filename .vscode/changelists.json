@@ -4,7 +4,11 @@
       "name": "Default",
       "files": [
         "3rd/index.html",
-        ".vscode/changelists.json"
+        ".vscode/changelists.json",
+        "3rd/kina.jpg",
+        "video/bird.svg",
+        "video/image1.jpg",
+        "video/index.html"
       ]
     }
   ],

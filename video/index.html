@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,8 @@
         .video-container {
             display: center;
             width: 100%;
-            max-width: 100%; /* Constrains size on larger screens */
+            max-width: 100%;
+            /* Constrains size on larger screens */
             margin: 1rem auto;
         }
 
@@ -18,8 +20,10 @@
             display: center;
             width: 100%;
             height: auto;
-            aspect-ratio: 16 / 9; /* Maintains standard widescreen proportions */
-            object-fit: cover;    /* Prevents distortion */
+            aspect-ratio: 16 / 9;
+            /* Maintains standard widescreen proportions */
+            object-fit: cover;
+            /* Prevents distortion */
             border-radius: 8px;
         }
 
@@ -35,8 +39,9 @@
         }
 
         #showBtn {
-           color: black;
+            color: black;
         }
+
         /* this one for utube palylist */
         .nav-link {
             color: black;
@@ -51,41 +56,40 @@
             backdrop-filter: blur(10px);
             background: rgba(245, 245, 245, 0);
             border: 1px solid rgba(245, 245, 245, 0);
-        
+
         }
     </style>
 </head>
+
 <body>
-    <section class="svg">
+    <!-- <section class="svg">
         <img src="hang.svg" alt="bird" width="50%" height="auto">
-    </section>
-    
+    </section> -->
+
     <div>
         <!-- bring here the svg section to disable them when scroll sticky postion -->
         <button id="showBtn" onclick="showContent()">show something</button>
         <template id="video-template">
             <div class="video-container">
-                <video class="video-player" controls playsinline poster="image2.jpg">
-                    <source src="uzi.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
+                <img class="video-player" src="image1.jpg"/>
             </div>
+
             <button id="showBtn" onclick="showContent()">show again</button>
             <!-- <button><a href="https://www.youtube.com/watch?v=PMk8L9FNqnY&list=PLqK6-pJRN1VbH2fpK0jAFJDAiW_WVsVgg&pp=sAgC" class="nav-link">Youthube playlist</a></button> -->
         </template>
     </div>
-        <p>
-            <button>
-                <nav class="menu">
-                    <a href="https://draco-go-89.github.io/music-player/" class="nav-link">playlist</a>
-                </nav>
-            </button>
-        </p>
+    <p>
+        <button>
+            <nav class="menu">
+                <a href="https://draco-go-89.github.io/music-player/" class="nav-link">playlist</a>
+            </nav>
+        </button>
+    </p>
     <script>
         function showContent() {
             const temp = document.getElementById("video-template");
             const clon = temp.content.cloneNode(true);
-            
+
             // Append the cloned node
             document.body.appendChild(clon);
 
@@ -95,4 +99,5 @@
     </script>
 
 </body>
+
 </html>
