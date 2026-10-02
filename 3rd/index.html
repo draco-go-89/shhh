@@ -1,39 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ur mine</title>
     <style>
-        .btn {
-            cursor: pointer;
-            display: inline-block;
-        }
-
-        .lyrics {
-            font-weight: 500;
-            font-family: sans-serif;
-            font-style: italic;
-            width: 76%;
-            height: 90px;
-            position: inherit;
-            background-image: url(forest.jpg);
-            /* 1. HIDES THE LYRICS BY DEFAULT */
-            display: none; 
+        .btn { cursor: pointer; display: inline-block; }
+        .lyrics { 
+            font-weight: 500; 
+            font-family: sans-serif; 
+            font-style: italic; 
+            width: 76%; 
+            height: 90px; 
+            position: inherit; 
+            background-image: url(forest.jpg); 
+            display: none; /* Hidden by default */
         }
     </style>
 </head>
-
 <body>
-    <p>
-        <!-- Added an ID here so JavaScript can easily target it -->
-        <textarea id="lyricsTextarea" class="lyrics">
 
-    Your lips,
-    My lips,
-    Apocalypse
-        </textarea>
+    <p>
+        <textarea id="lyricsTextarea" class="lyrics"></textarea>
     </p>
 
     <div class="dropdown-wrapper">
@@ -46,13 +34,11 @@
         </select>
     </div>
 
-    <!-- Simple Play/Stop Buttons -->
     <div class="controls" style="margin-top: 10px;">
         <button id="playBtn">Play</button>
         <button id="stopBtn">Stop</button>
     </div>
 
-    <!-- Hidden HTML Audio Element -->
     <audio id="mainAudio"></audio>
 
     <script>
@@ -60,21 +46,28 @@
         const audioPlayer = document.getElementById('mainAudio');
         const playBtn = document.getElementById('playBtn');
         const stopBtn = document.getElementById('stopBtn');
-        // 2. TARGET THE TEXTAREA ELEMENT
-        const lyricsTextarea = document.getElementById('lyricsTextarea'); 
+        const lyricsTextarea = document.getElementById('lyricsTextarea');
 
-        // 1. Handle song changes from the dropdown
+        // 1. Define lyrics for each song filename
+        const songLyrics = {
+            "mine.mp3": `my my my my my girl,
+this is for my girl, 
+my sexy girl in my heart`, // can do enter for new lines if only one ` (up the tab key) is given in the string
+            "apocalypse.mp3": `got the music in you,
+baby tell my why`
+            
+        };
+
+        // Handle song changes from the dropdown
         dropdown.addEventListener('change', function () {
             const selectedTrackUrl = this.value;
 
-            // 3. TOGGLE VISIBILITY BASED ON THE SELECTED TRACK
-            // Add any other triggering filenames inside the array brackets, separated by commas
-            const triggeringSongs = ["apocalypse.mp3"]; 
-
-            if (triggeringSongs.includes(selectedTrackUrl)) {
-                lyricsTextarea.style.display = "block"; // Show lyrics
+            // 2. Check if the selected song has lyrics defined
+            if (songLyrics[selectedTrackUrl]) {
+                lyricsTextarea.value = songLyrics[selectedTrackUrl]; // Update content
+                lyricsTextarea.style.display = "block";              // Show textarea
             } else {
-                lyricsTextarea.style.display = "none";  // Hide lyrics for any other file
+                lyricsTextarea.style.display = "none";               // Hide if no lyrics
             }
 
             if (selectedTrackUrl) {
@@ -86,7 +79,7 @@
             }
         });
 
-        // 2. Play button functionality
+        // Play button functionality
         playBtn.addEventListener('click', function () {
             if (audioPlayer.src) {
                 audioPlayer.play().catch(error => {
@@ -97,7 +90,7 @@
             }
         });
 
-        // 3. Stop button functionality
+        // Stop button functionality
         stopBtn.addEventListener('click', function () {
             audioPlayer.pause();
             audioPlayer.currentTime = 0;
