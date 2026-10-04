@@ -59,8 +59,10 @@ body{
 
 /* .btn:hover {   
     transform: translateY(20px);
-    opacity: 0.9;
+    opacity: 1.9;
+    rotate: 180deg;
 }  */
+  
 /* (bt.:hover transforn) that one is when user trying to press button moves away */
 
 
