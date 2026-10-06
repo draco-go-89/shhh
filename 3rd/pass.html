@@ -134,9 +134,9 @@
     <div class="modal-overlay" id="passwordModal">
         <div class="modal-box">
             <!-- <h3>Enter Password</h3> -->
-            <p style="font-size: 13px; margin-bottom: 0;">Password is your first 5 digit Mobile Number</p>
+            <p style="font-size: 13px; margin-bottom: 0;">Password is your first 6 digit Mobile Number</p>
 
-            <input type="password" id="passInput" placeholder="Your first 5 digit mobile number"
+            <input type="password" id="passInput" placeholder="Your first 6 digit mobile number"
                 onkeydown="handleKey(event)" />
 
             <button class="btn" style="width: 100%;" onclick="submitGate()">Continue</button>
@@ -147,7 +147,7 @@
     </div>
 
     <script>
-        const PASSCODE = "99540";
+        const PASSCODE = "995403";
         let pendingDestination = "";
 
         function openGate(targetUrl) {
