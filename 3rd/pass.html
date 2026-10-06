@@ -115,7 +115,7 @@
 
         .error-msg {
             color: #dc2626;
-            font-size: 13px;
+            font-size: 10px;
             margin-top: 8px;
             display: none;
         }
@@ -126,7 +126,7 @@
 
     <!-- Landing Card -->
     <div class="main-card">
-        <p>Click below to access something special</p>
+        <p>Tap here to unlock a surprise</p>
         <button class="btn" onclick="openGate('pass.txt')">ONLY4U</button>
     </div>
 
@@ -142,7 +142,7 @@
             <button class="btn" style="width: 100%;" onclick="submitGate()">Continue</button>
             <button class="btn btn-cancel" style="width: 100%;" onclick="closeGate()">Give Up</button>
 
-            <p id="errorMsg" class="error-msg">Incorrect password. Maybe its not you.</p>
+            <p id="errorMsg" class="error-msg">[Incorrect password. Enter the correct digits or its not for you]</p>
         </div>
     </div>
 
@@ -152,7 +152,7 @@
 
         function openGate(targetUrl) {
             pendingDestination = targetUrl;
-            document.getElementById("passInput").value = "";  //already given first 3-digit of password
+            document.getElementById("passInput").value = "";  //already given digits of password
             document.getElementById("errorMsg").style.display = "none";
             document.getElementById("passwordModal").style.display = "flex";
             document.getElementById("passInput").focus();
