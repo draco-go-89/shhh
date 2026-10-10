@@ -36,8 +36,9 @@
         <select id="audioDropdown">
             <option value="" disabled selected>Select</option>
             <option value="makeumine.mp3">make u mine</option>
-            <option value="mine.mp3">this is for my g</option>
+            <!-- <option value="mine.mp3">this is for my g</option> -->
             <option value="ritual.mp3">ritual</option>
+            <option value="mockingbird.mp3">mockingbird</option>
             <option value="apocalypse.mp3">apocalypse</option>
         </select>
     </div>
@@ -56,12 +57,12 @@
         const stopBtn = document.getElementById('stopBtn');
         const lyricsTextarea = document.getElementById('lyricsTextarea');
 
-        // 1. Define lyrics for each song filename
+        // 1. Define lyrics for each song filename; the apocalypse lyrics id disabled, i make the pocalypse song name instead of correct song name so that it ignores the lyrics when song played
         const songLyrics = {
             "mine.mp3": `my my my my my girl,
 this is for my girl, 
 my sexy girl in my heart`, // can do enter for new lines if only one ` (up the tab key) is given in the string
-            "apocalypse.mp3": `You leapt from crumbling bridges watching cityscapes turn to dust
+            "pocalypse.mp3": `You leapt from crumbling bridges watching cityscapes turn to dust
 Filming helicopters crashing in the ocean from way above
 
 Got the music in you baby,
